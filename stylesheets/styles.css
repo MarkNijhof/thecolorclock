@@ -5,12 +5,22 @@ body {
     padding: 0px;
 }
 
-#wrapper {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    /* bring your own prefixes */
-    transform: translate(-50%, -50%);
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px/*whatever width you want*/;
 }
 
 #box {
@@ -26,7 +36,7 @@ body {
 #time {
     position: relative;
     font: lato;
-    font-size: 10em;
+    font-size: 5em;
     color: white;
     text-align: center;
 }
@@ -34,7 +44,114 @@ body {
 #date {
     position: relative;
     font: lato;
-    font-size: 2.5em;
+    font-size: 1.5em;
     color: white;
     text-align: center;
+}
+
+/* Smartphones (portrait and landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+    .inner { width: 200px; }
+    #time { font-size: 2.5em; }
+    #date { font-size: 1em; }
+}
+
+/* Smartphones (landscape) */
+@media only screen and (min-width : 321px) {
+/* Styles */
+    .inner { width: 200px; }
+    #time { font-size: 2.5em; }
+    #date { font-size: 1em; }
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width : 320px) {
+/* Styles */
+    .inner { width: 200px; }
+    #time { font-size: 2.5em; }
+    #date { font-size: 1em; }
+}
+
+/* iPads (portrait and landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+    .inner { width: 400px; }
+    #time { font-size: 5em; }
+    #date { font-size: 2em; }
+}
+
+/* iPads (landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+    .inner { width: 400px; }
+    #time { font-size: 5em; }
+    #date { font-size: 2em; }
+}
+
+/* iPads (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+    .inner { width: 400px; }
+    #time { font-size: 5em; }
+    #date { font-size: 2em; }
+}
+
+/* Desktops and laptops */
+@media only screen and (min-width : 1224px) {
+/* Styles */
+    .inner { width: 600px; }
+    #time { font-size: 7em; }
+    #date { font-size: 2em; }
+}
+
+/* Large screens */
+@media only screen and (min-width : 1824px) {
+/* Styles */
+    .inner { width: 600px; }
+    #time { font-size: 7em; }
+    #date { font-size: 2em; }
+}
+
+/* iPhone 4. Comma can be used to apply same rules to multiple media queries. */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+/* Styles */
+}
+
+/*iPhone 6 Portrait*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : portrait) {
+
+}
+
+/*iPhone 6 landscape*/
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation : landscape) {
+
+}
+
+/*iPhone 6+ Portrait*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : portrait) {
+    .inner { width: 500px; }
+    #time { font-size: 6em; }
+    #date { font-size: 2em; }
+}
+
+/*iPhone 6+ landscape*/
+@media only screen and (min-device-width: 414px) and (max-device-width: 736px) and (orientation : landscape) {
+    .inner { width: 600px; }
+    #time { font-size: 7em; }
+    #date { font-size: 2em; }
+}
+
+/*iPhone 6 and iPhone 6+ portrait and landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) {
+}
+
+/*iPhone 6 and iPhone 6+ portrait*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait) {
+
+}
+
+/*iPhone 6 and iPhone 6+ landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape) {
+
 }
